@@ -1,0 +1,38 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --color-orange: #{$orange};
+  --color-dark-orange: #{$dark--orange};
+  --color-off-white: #{$off--white};
+  --color-white: #{$white};
+  --color-black: #{$black};
+  --font-family: #{$avenir};
+  // Add additional font families used here
+}
