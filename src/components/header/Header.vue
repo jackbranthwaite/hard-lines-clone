@@ -1,13 +1,38 @@
 <template>
   <header class="header">
-    <div class="logo"></div>
+    <div class="logo">
+      <img
+        src="../../assets/images/logo.jpg"
+        alt="Logo for hard lines coffee"
+      />
+    </div>
     <div class="menu">
       <nuxt-link class="menu-item" to="#">SUBSCRIPTIONS</nuxt-link>
-      <menu-dropdown title="SHOP" />
+      <div v-for="item in menuItems" :key="item" class="dropdown-container">
+        <menu-dropdown :item="item" />
+      </div>
+
       <nuxt-link class="menu-item" to="#">BOOK A TABLE</nuxt-link>
     </div>
   </header>
 </template>
+
+<script>
+import { defineComponent, onMounted, ref } from '@vue/composition-api'
+import { menuItems } from '~/menuItems.js'
+
+export default defineComponent({
+  data() {
+    return {
+      menuItems
+    }
+  },
+  mounted() {
+    this.menuItems = menuItems
+  }
+})
+</script>
+
 
 <style lang="scss" scoped>
 @import '~assets/styles/config';
@@ -21,12 +46,19 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  max-width: 90vw;
+  max-width: 1920px;
+  padding-left: 90px;
+  padding-right: 90px;
+  width: 90vw;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
 .logo {
-  background-color: $orange;
-  height: 100px;
-  width: 100px;
+  height: auto;
+  max-width: 219px;
 }
 .menu-item {
   text-decoration: none;

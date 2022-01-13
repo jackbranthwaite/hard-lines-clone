@@ -8,7 +8,7 @@ export default Vue.extend({
   name: 'Home',
 
   head: {
-    title: 'Hello world!'
+    title: 'Hard Lines Coffee'
   }
 })
 </script>
