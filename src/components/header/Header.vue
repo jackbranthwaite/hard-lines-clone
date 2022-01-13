@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, ref } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import { menuItems } from '~/menuItems.js'
 
 export default defineComponent({

@@ -4,16 +4,14 @@
       <nuxt-link class="title-link" :to="item.link"
         >{{ item.title }} &#9662;</nuxt-link
       >
-      <div v-for="(subLink, i) in item.links" :key="i" class="link-list">
-        <ul>
-          <li>
-            <nuxt-link :to="subLink.link" class="sublink">{{
-              subLink.title
-            }}</nuxt-link>
-          </li>
-        </ul>
-      </div>
     </div>
+    <ul class="link-list">
+      <li v-for="(subLink, i) in item.links" :key="i">
+        <nuxt-link :to="subLink.link" class="sublink">{{
+          subLink.title
+        }}</nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -31,10 +29,21 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.dropdown-container {
+  position: relative;
+}
 .title-link {
   text-decoration: none;
 }
 .sublink {
   text-decoration: none;
+}
+
+.link-list ~ .dropdown-container:hover {
+  display: block;
+}
+.link-list {
+  display: none;
+  position: absolute;
 }
 </style>
