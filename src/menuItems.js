@@ -27,3 +27,14 @@ export const menuItems = [{
   ]
 }
 ]
+
+export const bottomMenuItems = [
+  'Home',
+  'Blog',
+  'Brew Guides',
+  'Delivery & Shipping',
+  'Returns Policy',
+  'Enjoying the Coffee',
+  'Run Club',
+  'Careers'
+]

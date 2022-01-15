@@ -31,7 +31,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .dropdown-container {
-  display: inline-block;
   position: relative;
 }
 .title-link {
@@ -40,15 +39,17 @@ export default defineComponent({
 .sublink {
   text-decoration: none;
 }
-ul {
+
+.link-list {
   height: 0;
   opacity: 0;
   position: absolute;
   transition: all ease 0.5s;
+  visibility: hidden;
 }
 /* stylelint-disable no-descending-specificity */
-.dropdown-container:hover ul {
-  height: 200px;
+.dropdown-container:hover .link-list {
   opacity: 1;
+  visibility: visible;
 }
 </style>
