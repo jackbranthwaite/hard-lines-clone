@@ -14,7 +14,13 @@
             <nuxt-link to="#" class="list-link">{{ link }}</nuxt-link>
           </li>
         </ul>
-        <div class="living-wage-container"></div>
+        <div class="living-wage-container">
+          <img
+            src="../../assets/images/living-wage.png"
+            alt="Living wage logo"
+            class="living-wage-image"
+          />
+        </div>
       </div>
       <div class="opening-container">
         <div class="opening-one">
@@ -97,6 +103,11 @@ export default defineComponent({
 .opening-container {
   padding-left: 50px;
   width: 33%;
+}
+.living-wage-container {
+  height: auto;
+  margin-top: 50px;
+  width: 5vw;
 }
 .list-link {
   color: $orange;

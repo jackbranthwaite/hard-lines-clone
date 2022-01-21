@@ -1,10 +1,12 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img
-        src="../../assets/images/logo.jpg"
-        alt="Logo for hard lines coffee"
-      />
+      <nuxt-link to="/">
+        <img
+          src="../../assets/images/logo.jpg"
+          alt="Logo for hard lines coffee"
+        />
+      </nuxt-link>
     </div>
     <div class="menu">
       <nuxt-link class="menu-item" to="#">SUBSCRIPTIONS</nuxt-link>
