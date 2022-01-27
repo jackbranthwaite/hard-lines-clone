@@ -111,6 +111,7 @@ export default defineComponent({
 }
 .list-link {
   color: $orange;
+  font-size: 14px;
   line-height: 2.5;
 }
 .list-link:hover {
@@ -118,6 +119,7 @@ export default defineComponent({
 }
 .location {
   color: $orange;
+  font-size: 14px;
 }
 .location:hover {
   opacity: 0.6;
@@ -127,5 +129,12 @@ export default defineComponent({
 }
 .opening-two {
   padding-bottom: 50px;
+}
+
+.times,
+.subscribe,
+.sub-subscribe,
+.copyright-text {
+  font-size: 14px;
 }
 </style>

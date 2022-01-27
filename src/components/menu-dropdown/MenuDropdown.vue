@@ -1,6 +1,6 @@
 <template>
   <div v-if="item" class="dropdown-container">
-    <div class="dropdown-title">
+    <div class="title-container">
       <nuxt-link class="title-link" :to="item.link"
         >{{ item.title }} &#9662;</nuxt-link
       >
@@ -33,10 +33,17 @@ export default defineComponent({
 .dropdown-container {
   position: relative;
 }
+.title-container {
+  align-content: flex-start;
+  display: flex;
+}
 .title-link {
+  font-size: 14px;
+  padding-top: 0;
   text-decoration: none;
 }
 .sublink {
+  font-size: 14px;
   text-decoration: none;
 }
 
