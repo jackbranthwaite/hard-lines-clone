@@ -27,19 +27,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.product-tile-container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 .main-image {
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: 380px;
 }
 .title {
   font-size: 14px;
+  padding-top: 10px;
 }
 .price {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
+  padding-top: 15px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="a-div">
+  <div class="homepage-container">
     <div class="title-section-container">
       <h1 class="title">Freshly Roasted Coffee</h1>
       <p class="paragraph">
@@ -39,6 +39,23 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '~assets/styles/config';
 
+.homepage-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 1920px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 90vw;
+  @include tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include xxlarge {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
 .title-section-container {
   align-items: center;
   display: flex;
@@ -63,9 +80,18 @@ export default defineComponent({
   width: 100%;
 }
 .products-container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90vw;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+
+  @include xlarge {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include xxlarge {
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+  }
 }
 </style>

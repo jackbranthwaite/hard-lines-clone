@@ -14,7 +14,7 @@ export default defineComponent({
 
 .separation-line {
   background-color: #f0efe5;
-  height: 2px;
+  height: 1px;
   justify-self: center;
   margin-bottom: 25px;
   margin-top: 25px;

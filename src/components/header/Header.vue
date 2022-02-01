@@ -60,6 +60,8 @@ export default defineComponent({
   margin-right: auto;
   margin-top: 50px;
   max-width: 1920px;
+  padding-left: 90px;
+  padding-right: 90px;
   width: 90vw;
 }
 .menu {
