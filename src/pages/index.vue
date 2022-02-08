@@ -17,6 +17,11 @@
       <product-tile />
       <product-tile />
       <product-tile />
+      <product-tile />
+      <product-tile />
+      <product-tile />
+      <product-tile />
+      <product-tile />
     </div>
   </div>
 </template>
