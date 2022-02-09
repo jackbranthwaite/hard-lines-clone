@@ -1,27 +1,35 @@
 <template>
-  <div class="product-tile-container">
-    <div class="image-container">
-      <img
-        src="../../static/brewpack-2021(winter).jpg"
-        alt=""
-        class="main-image"
-      />
-    </div>
-    <div class="information-container">
-      <div class="title-container">
-        <p class="title">The Brew Pack!</p>
+  <nuxt-link :to="productLink" style="text-decoration: none">
+    <div class="product-tile-container">
+      <div class="image-container">
+        <img
+          src="../../static/brewpack-2021(winter).jpg"
+          alt=""
+          class="main-image"
+        />
       </div>
-      <div class="price-container">
-        <p class="price">$36.00</p>
+      <div class="information-container">
+        <div class="title-container">
+          <p class="title">The Brew Pack!</p>
+        </div>
+        <div class="price-container">
+          <p class="price">$36.00</p>
+        </div>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+  props: {
+    productLink: {
+      type: String,
+      default: '/'
+    }
+  },
   setup() {}
 })
 </script>

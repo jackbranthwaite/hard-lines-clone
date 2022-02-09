@@ -12,6 +12,7 @@
     "lint": "yarn lint:js && yarn lint:style"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "^0.31.0",
     "@vue/composition-api": "^1.4.3",
     "core-js": "^3.14.0",
     "nuxt": "^2.15.6"

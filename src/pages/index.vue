@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage-container">
+  <content-wrapper>
     <div class="title-section-container">
       <h1 class="title">Freshly Roasted Coffee</h1>
       <p class="paragraph">
@@ -12,24 +12,26 @@
       <separation-line />
     </div>
     <div class="products-container">
-      <product-tile />
+      <product-tile :product-link="'/coffee/brew-pack'" />
       <product-tile />
       <product-tile />
       <product-tile />
       <product-tile />
     </div>
-  </div>
+  </content-wrapper>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api'
+import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
 import ProductTile from '~/components/product-tile/ProductTile.vue'
 import SeparationLine from '~/components/seperation-line/SeparationLine.vue'
 
 export default defineComponent({
-  name: 'Home',
+  name: 'HardLines',
   components: {
     ProductTile,
-    SeparationLine
+    SeparationLine,
+    ContentWrapper
   },
   head: {
     title: 'Hard Lines Coffee'
@@ -86,11 +88,13 @@ export default defineComponent({
   row-gap: 30px;
 
   @include xlarge {
-    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
   }
   @include xxlarge {
     column-gap: 60px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     row-gap: 60px;
   }
 }

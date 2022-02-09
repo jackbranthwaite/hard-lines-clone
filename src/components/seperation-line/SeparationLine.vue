@@ -16,8 +16,8 @@ export default defineComponent({
   background-color: #f0efe5;
   height: 1px;
   justify-self: center;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 60px;
+  margin-top: 60px;
   width: 90vw;
   z-index: 100;
 }

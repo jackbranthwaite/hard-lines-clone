@@ -4,29 +4,32 @@
       v-if="!notificationClicked"
       @close="notificationClicked = true"
     />
-    <header class="header">
-      <div class="logo">
-        <nuxt-link to="/">
-          <img
-            src="../../assets/images/logo.jpg"
-            alt="Logo for hard lines coffee"
-          />
-        </nuxt-link>
-      </div>
-      <div class="menu">
-        <nuxt-link class="menu-item" to="#">SUBSCRIPTIONS</nuxt-link>
-        <div v-for="item in menuItems" :key="item" class="menu-item">
-          <menu-dropdown :item="item" />
+    <content-wrapper>
+      <header class="header">
+        <div class="logo">
+          <nuxt-link to="/">
+            <img
+              src="../../assets/images/logo.jpg"
+              alt="Logo for hard lines coffee"
+            />
+          </nuxt-link>
         </div>
-        <nuxt-link class="menu-item" to="#">BOOK A TABLE</nuxt-link>
-        <nuxt-link to="#" class="sign-in">SIGN IN</nuxt-link>
-      </div>
-    </header>
+        <div class="menu">
+          <nuxt-link class="menu-item" to="#">SUBSCRIPTIONS</nuxt-link>
+          <div v-for="(item, key) in menuItems" :key="key" class="menu-item">
+            <menu-dropdown :item="item" />
+          </div>
+          <nuxt-link class="menu-item" to="#">BOOK A TABLE</nuxt-link>
+          <nuxt-link to="#" class="sign-in">SIGN IN</nuxt-link>
+        </div>
+      </header>
+    </content-wrapper>
   </div>
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import ContentWrapper from '../content-wrapper/ContentWrapper.vue'
 import MenuDropdown from '../menu-dropdown/MenuDropdown.vue'
 import Notification from '../notification/Notification.vue'
 import { menuItems } from '~/menuItems.js'
@@ -34,7 +37,8 @@ import { menuItems } from '~/menuItems.js'
 export default defineComponent({
   components: {
     MenuDropdown,
-    Notification
+    Notification,
+    ContentWrapper
   },
   data() {
     return {
@@ -48,7 +52,6 @@ export default defineComponent({
 })
 </script>
 
-
 <style lang="scss" scoped>
 @import '~assets/styles/config';
 
@@ -56,13 +59,8 @@ export default defineComponent({
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 50px;
   max-width: 1920px;
-  padding-left: 90px;
-  padding-right: 90px;
-  width: 90vw;
 }
 .menu {
   align-items: center;
