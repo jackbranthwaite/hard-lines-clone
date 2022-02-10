@@ -16,7 +16,7 @@
           <div class="product-page_product_title">The Brew Pack!</div>
           <div class="product-page_product_price">$36.00</div>
           <div class="product-page_product_grind-container">
-            <!-- Build a simple select field -->
+            <grind-dropdown title="Select Roast/Grind" />
           </div>
           <div class="product-page_product_amount-container">
             <!-- Build a simple select field -->
@@ -30,7 +30,6 @@
             Salto- The house roast and the fan favourite! Ethiopia Sawana Kebele
             - Watermelon Bubblegum! The Big Blend- Big sticky toffee and apple
             notes! Pery Chilcon Flores - Orange Blossom & Red Berries!
-            Roast/Grind:
           </div>
         </div>
       </div>
@@ -44,10 +43,15 @@
 <script>
 import { defineComponent, ref } from '@vue/composition-api'
 import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
+import GrindDropdown from '~/components/grind-dropdown/GrindDropdown.vue'
 import StyledButton from '~/components/styled-button/StyledButton.vue'
 
 export default defineComponent({
-  components: { ContentWrapper, StyledButton },
+  components: {
+    ContentWrapper,
+    StyledButton,
+    GrindDropdown
+  },
   setup() {
     const cart = ref(false)
     const addToCart = () => {
