@@ -16,20 +16,23 @@
           <div class="product-page_product_title">The Brew Pack!</div>
           <div class="product-page_product_price">$36.00</div>
           <div class="product-page_product_grind-container">
-            <grind-dropdown title="Select Roast/Grind" />
+            <grind-dropdown title="Select Roast/Grind" label="Roast/Grind:" />
           </div>
           <div class="product-page_product_amount-container">
             <!-- Build a simple select field -->
           </div>
           <styled-button title="ADD TO CART" @add-item="addToCart" />
           <div class="product-page__product_description">
-            The Hard Lines brew Pack is here! 4 x 250g single origins coffee
-            delivered to your door. A great intro to a range of different
-            coffees and tasting notes. Share with the house or guzzle them for
-            yourself! Enjoy! This pack contains. House Party - Brazil Fazenda do
-            Salto- The house roast and the fan favourite! Ethiopia Sawana Kebele
-            - Watermelon Bubblegum! The Big Blend- Big sticky toffee and apple
-            notes! Pery Chilcon Flores - Orange Blossom & Red Berries!
+            <p class="">
+              The Hard Lines brew Pack is here! 4 x 250g single origins coffee
+              delivered to your door. A great intro to a range of different
+              coffees and tasting notes. Share with the house or guzzle them for
+              yourself! Enjoy! <br />This pack contains.<br />House Party -
+              Brazil Fazenda do Salto- The house roast and the fan favourite!
+              <br />Ethiopia Sawana Kebele - Watermelon Bubblegum! <br />The Big
+              Blend- Big sticky toffee and apple notes! <br />Pery Chilcon
+              Flores - Orange Blossom & Red Berries!
+            </p>
           </div>
         </div>
       </div>
@@ -66,3 +69,32 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss" scoped>
+@import '~assets/styles/config';
+
+.product-page_product-section_container {
+  display: flex;
+  width: 100%;
+}
+.product-page_image_container {
+  margin-top: 50px;
+  width: 40%;
+}
+.product-page_product_container {
+  padding-left: 42px;
+  padding-top: 50px;
+  width: 60%;
+}
+.product-page_also_container {
+  padding-top: 50px;
+}
+.product-page_product_title {
+  font-size: 30px;
+  font-weight: 900;
+}
+.product-page_product_price {
+  color: $orange;
+  font-size: 22px;
+  padding-top: 40px;
+}
+</style>

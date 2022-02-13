@@ -30,7 +30,12 @@ export default defineComponent({
   cursor: pointer;
   font-weight: 800;
   height: 50px;
+  margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  transition: all 0.25s ease-in-out;
+}
+.styled-button_button:hover {
+  transform: scale(1.03);
 }
 </style>
