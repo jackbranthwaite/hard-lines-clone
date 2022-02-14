@@ -53,11 +53,14 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .grind-dropdown_wrapper {
+  min-height: 150px;
   padding-bottom: 40px;
   padding-top: 40px;
+  position: relative;
 }
 .grind-dropdown_container {
   align-items: center;
+  background-color: #fff;
   border: 1px solid #000;
   border-radius: 4px;
   display: flex;
@@ -68,6 +71,7 @@ export default defineComponent({
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
+  position: absolute;
   width: 240px;
 }
 .grind-dropdown_label {

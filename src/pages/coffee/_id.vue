@@ -2,7 +2,7 @@
   <content-wrapper>
     <div class="product-page_container">
       <div class="product-page_breadcrumb_container">
-        <p>breadcrumb</p>
+        <breadcrumbs />
       </div>
       <div class="product-page_product-section_container">
         <div class="product-page_image_container">
@@ -27,17 +27,22 @@
               The Hard Lines brew Pack is here! 4 x 250g single origins coffee
               delivered to your door. A great intro to a range of different
               coffees and tasting notes. Share with the house or guzzle them for
-              yourself! Enjoy! <br />This pack contains.<br />House Party -
-              Brazil Fazenda do Salto- The house roast and the fan favourite!
-              <br />Ethiopia Sawana Kebele - Watermelon Bubblegum! <br />The Big
-              Blend- Big sticky toffee and apple notes! <br />Pery Chilcon
-              Flores - Orange Blossom & Red Berries!
+              yourself! Enjoy! <br /><br />This pack contains.<br /><br />House
+              Party - Brazil Fazenda do Salto- The house roast and the fan
+              favourite! <br /><br />Ethiopia Sawana Kebele - Watermelon
+              Bubblegum! <br /><br />The Big Blend- Big sticky toffee and apple
+              notes! <br /><br />Pery Chilcon Flores - Orange Blossom & Red
+              Berries!
             </p>
           </div>
         </div>
       </div>
       <div class="product-page_also_container">
         <div class="product-page_also_title">You might also like</div>
+        <div class="product-page_also_sub-container">
+          <product-tile />
+          <product-tile />
+        </div>
       </div>
     </div>
   </content-wrapper>
@@ -45,15 +50,19 @@
 
 <script>
 import { defineComponent, ref } from '@vue/composition-api'
+import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs.vue'
 import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
 import GrindDropdown from '~/components/grind-dropdown/GrindDropdown.vue'
+import ProductTile from '~/components/product-tile/ProductTile.vue'
 import StyledButton from '~/components/styled-button/StyledButton.vue'
 
 export default defineComponent({
   components: {
     ContentWrapper,
     StyledButton,
-    GrindDropdown
+    GrindDropdown,
+    ProductTile,
+    Breadcrumbs
   },
   setup() {
     const cart = ref(false)
@@ -96,5 +105,27 @@ export default defineComponent({
   color: $orange;
   font-size: 22px;
   padding-top: 40px;
+}
+.product-page_also_title {
+  font-size: 24px;
+  font-weight: 900;
+}
+.product-page_also_sub-container {
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 30px;
+  row-gap: 30px;
+
+  @include xlarge {
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 60px;
+  }
+  @include xxlarge {
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+  }
 }
 </style>
