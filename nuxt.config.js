@@ -1,4 +1,7 @@
+import smConfig from "./sm.json";
+
 export default {
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -26,7 +29,7 @@ export default {
   css: ['@/assets/styles/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/client-init', ssr: false }],
+  plugins: [{ src: '~/plugins/client-init', ssr: false }, { src: "~/plugins/prismicLinks", ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -41,12 +44,24 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [["@nuxtjs/prismic", {
+    endpoint: smConfig.apiEndpoint || "",
+  }], ["nuxt-sm"]],
+
+  generate: {
+    fallback: true
+  },
 
   // Use src/ directory to keep consistent file structure across frameworks
   srcDir: 'src/',
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    transpile: ["vue-slicezone", "nuxt-sm"]
+  },
+  prismic: {
+    endpoint: 'https://hard-lines.cdn.prismic.io/api/v2',
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
+  },
 }
