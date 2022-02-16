@@ -33,6 +33,7 @@ export default defineComponent({
     SeparationLine,
     ContentWrapper
   },
+  setup() {},
   head: {
     title: 'Hard Lines Coffee'
   }

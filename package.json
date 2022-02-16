@@ -9,15 +9,13 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style",
-    "slicemachine": "start-slicemachine"
+    "lint": "yarn lint:js && yarn lint:style"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.31.0",
     "@vue/composition-api": "^1.4.3",
     "core-js": "^3.14.0",
-    "nuxt": "^2.15.6",
-    "vue-slicezone": "^0.1.0"
+    "nuxt": "^2.15.6"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.6",
