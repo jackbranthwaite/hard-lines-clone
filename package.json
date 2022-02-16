@@ -14,12 +14,9 @@
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.31.0",
-    "@nuxtjs/prismic": "^1.4.0",
-    "@prismicio/slice-simulator-vue": "^0.2.0",
     "@vue/composition-api": "^1.4.3",
     "core-js": "^3.14.0",
     "nuxt": "^2.15.6",
-    "nuxt-sm": "^0.1.0",
     "vue-slicezone": "^0.1.0"
   },
   "devDependencies": {
@@ -37,7 +34,6 @@
     "prettier": "^2.3.1",
     "sass": "^1.33.0",
     "sass-loader": "^10.1.1",
-    "slice-machine-ui": "^0.2.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^8.0.0",
